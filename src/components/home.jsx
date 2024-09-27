@@ -74,12 +74,15 @@ export default function Home() {
   return (
     <>
       <div className="logo-content">
-        <h1 className="logo">
-          Wady<span>Zen</span>
-        </h1>
-      </div>
+      <h1 className="logo">
+        Wady<span>Zen</span>
+      </h1>
+      <p className="small-logo">
+        W<span>Z</span>
+      </p>
+    </div>
 
-      <div id="container">
+      <div id="home">
         <div className="left">
           <div className="text-box">
             <h2 className="title">Little Introduction</h2>

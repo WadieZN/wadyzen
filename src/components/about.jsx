@@ -25,7 +25,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="about">
+    <div id="about">
       <img
         src={miles}
         alt="Miles Morales"
