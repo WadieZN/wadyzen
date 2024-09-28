@@ -9,7 +9,7 @@ export default function GlitchTransition({ children }) {
     <SwitchTransition>
       <CSSTransition
         key={location.pathname} 
-        timeout={700}       
+        timeout={500}       
         classNames="transition"
         unmountOnExit           
       >

@@ -1,7 +1,7 @@
 const skills = [
   'HTML5', 'CSS3', 'JavaScript', 'React', 'jQuery', 'TypeScript', 
-  'Redux', 'SASS', 'Tailwind', 'Webpack', 'Git', 'Figma',
-  'Responsive Design', 'Testing', 'API Integration', 'AJAX'
+  'Redux', 'SASS', 'Tailwind',  'Jest', 'Webpack', 'Git', 'Figma',
+  'Responsive Design', 'Testing', 'API Integration', 'AJAX',
 ];
 
 const InfiniteScroll = () => {

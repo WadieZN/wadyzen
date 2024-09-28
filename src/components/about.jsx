@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import miles from './../assets/images/miles.png';
+import miles from './../assets/img/miles.png';
 
 export default function About() {
   const [offsetX, setOffsetX] = useState(0);

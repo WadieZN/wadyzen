@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import Clock from "./clock";
 import InfiniteScroll from "./infiniteScroll";
 import CyberpunkGIFs from "./gifs";
-import project1 from "./../assets/images/punkt.png";
-import project2 from "./../assets/images/weather.png";
-import project3 from "./../assets/images/mp.png";
+import project1 from "./../assets/img/punkt.png";
+import project2 from "./../assets/img/weather.png";
+import project3 from "./../assets/img/mp.png";
 
 export default function Home() {
   const links = [
