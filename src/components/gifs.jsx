@@ -17,6 +17,9 @@ export default function CyberpunkGIFs() {
     'https://giphy.com/embed/xUOwG5x1vFWzSF3Try',
     'https://giphy.com/embed/l41lYtgsrsHPrZ3Z6',
     'https://giphy.com/embed/cqTym0sHukkfarTIOR',
+    'https://giphy.com/embed/xUPGcezGBHRv3mo1XO',
+    'https://giphy.com/embed/uFiaPgBJVE1WhbhOVh',
+    'https://giphy.com/embed/dZG5FKAkGY2yJTPOeo',
   ];
 
   const shuffleArray = (array) => {

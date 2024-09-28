@@ -95,7 +95,7 @@ export default function Home() {
       </p>
             <h3 className="subtitle">Some quick facts:</h3>
             <ul>
-              <li>I'm from Morocco and yes, still live here.</li>
+              <li>I'm from Morocco, still live here.</li>
               <li>My main programming language is JavaScript.</li>
               <li>I'm pro at chess.</li>
               <li>

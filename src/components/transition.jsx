@@ -3,17 +3,17 @@ import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { useLocation } from 'react-router-dom';
 
 export default function GlitchTransition({ children }) {
-  const location = useLocation();  // Get the current route location
+  const location = useLocation();
 
   return (
     <SwitchTransition>
       <CSSTransition
         key={location.pathname} 
         timeout={700}       
-        classNames="glitch"
+        classNames="transition"
         unmountOnExit           
       >
-        <div className="glitch-screen">
+        <div className="transition-screen">
           {children} 
         </div>
       </CSSTransition>
