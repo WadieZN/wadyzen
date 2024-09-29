@@ -8,16 +8,10 @@
     src: url('./fonts/GlitchGoblin-2O87v.ttf');
 }
 
-@font-face {
-    font-family: Blade-Logic;
-    src: url('./fonts/BladeLogicDemoRegular-ALnVD.otf');
-}
-
 // Definitions
 
 $font: "Source Code Pro", monospace;
 $cyber-font: 'Cyberway Riders';
-$blade-font: Blade-Logic;
 $goblin-font : glitch-goblin;
 $bg: #010315;
 $primary: #5933E6;
@@ -244,7 +238,7 @@ body {
 @media screen and (max-width: 620px) {
     .menu-btn{
         font-size: 2.3rem;
-        top: 10px;
+        top: 5px;
     }
 
     .menu-item{
@@ -256,7 +250,7 @@ body {
 
 .clock-container {
     position: relative;
-    padding: 5px 20px;
+    padding: 5px 15px;
     border: 3px solid $secondary;
     background: #1a0720;
     border-radius: 5px;
@@ -265,15 +259,28 @@ body {
     text-align: center;
     min-height: 100px;
     width: 100%;
+    .clock {
+        font-family: $goblin-font;
+        color: $secondary;
+        text-shadow: 0 0 10px $secondary;
+        font-size: 3.6rem;
+        letter-spacing: 7px;
+        animation: clock 12ms infinite;
+    }
 }
 
-.clock {
-    font-family: $goblin-font;
-    color: $secondary;
-    text-shadow: 0 0 10px $secondary;
-    font-size: 3.6rem;
-    letter-spacing: 7px;
-    animation: clock 12ms infinite;
+.right-clock{
+    width: 100%;
+}
+
+.left-clock{
+    width: 100%;
+    display: none;
+    .clock-container{
+        min-height: auto;
+        padding: 10px;
+        font-size: 3rem;
+    }
 }
 
 @keyframes clock {
@@ -443,13 +450,23 @@ body {
     #home{
         grid-template-columns: 100%;
         grid-template-rows: auto;
-        .clock-container,
+        .right-clock,
         .gif-container{
             display: none;
+        }
+        .left-clock{
+            display: flex;
         }
         .right{
             flex-direction: column-reverse;
         }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #home{
+        margin-top: 25px;
+        padding: 0 15px;
     }
 }
 
@@ -552,7 +569,7 @@ body {
             transition: 150ms;
             opacity: .5;
             width: 250px;
-            border-radius: 10px
+            border-radius: 8px
         }
         &:hover img {
             opacity: .9;
@@ -747,18 +764,59 @@ body {
 
 // Navigation Transition
 
-.transition-screen {
+.pageLoad {
+    display: flex;
     position: absolute;
-    top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+    transition: all 0.1s ease-out;
+    z-index: 9999;
+    pointer-events: none;
   }
   
-
-.transition {
+  .animated {
+    opacity: 0;
+  }
+  
+  .pageLoad[loadimg="1"] {
+    background-image: url('./img/smoke1.png');
+  }
+  
+  .pageLoad[loadimg="2"] {
+    background-image: url('./img/smoke2.png');
+  }
+  .pageLoad[loadimg="3"] {
+    background-image: url('./img/smoke3.png');
+  }
+  .pageLoad[loadimg="4"] {
+    background-image: url('./img/smoke4.png');
+  }
+  .pageLoad[loadimg="5"] {
+    background-image: url('./img/smoke5.png');
+  }
+  .pageLoad[loadimg="6"] {
+    background-image: url('./img/smoke6.png');
+  }
+  .pageLoad[loadimg="7"] {
+    background-image: url('./img/smoke7.png');
+  }
+  .pageLoad[loadimg="8"] {
+    background-image: url('./img/smoke8.png');
+  }
+  .pageLoad[loadimg="9"] {
+    background-image: url('./img/smoke9.png');
+  }
+  .pageLoad[loadimg="10"] {
+    background-image: url('./img/smoke10.png');
+  }
+  
+  .transition {
     &-enter {
       opacity: 0;
     }
@@ -776,7 +834,6 @@ body {
       opacity: 0;
     }
   }
-  
 
 // Global Styles & Animations
 

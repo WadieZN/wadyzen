@@ -14,7 +14,7 @@ export default function About() {
     const offsetY = (mouseY / innerHeight - 0.5) * -40;
 
     setOffsetX(offsetX);
-    setOffsetY(offsetY);
+    setOffsetY(offsetY); 
   };
 
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function About() {
           <h2 className="title">Playtime</h2>
           <p>Two good hobbies I like to spend time with are Leetcode and chess. Just started Leetcoding in Summer 2024 which forced me to learn CS and data structures, cuz I can't stand not solving hard quizzes.</p>
           <p>My favorite show so far (as you may have concluded) is Spider Verse series, followed by Edgerunners. I also play lot of games, especially action and Sci-Fi.</p>
-          <p>A list of completed games: Spider-Man Series, Sekiro, Cyberpunk 2077, Watch Dogs, GoW Series, Asura's Wrath, Assassin's Creed Series, Final Fantasy, and a lot more.</p>
+          <p>A list of completed games: Spider-Man Series, Sekiro, Cyberpunk 2077, Watch Dogs, GoW Series, Persona 5, Asura's Wrath, Assassin's Creed Series, Final Fantasy, and a lot more.</p>
         </div>
       </div>
 

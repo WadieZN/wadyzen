@@ -84,6 +84,9 @@ export default function Home() {
 
       <div id="home">
         <div className="left">
+        <div className='left-clock'>
+          <Clock />
+        </div>
           <div className="text-box">
             <h2 className="title">Little Introduction</h2>
             <p>
@@ -117,9 +120,7 @@ export default function Home() {
             <div className="projects">
               {projects.map((project, index) => (
                 <a href={project.url} key={index} target="_blank" className="project">
-                  <div className="img">
-                    <img src={project.img} alt="" />
-                  </div>
+                  <img src={project.img} alt="" />
                   <div className="info">
                     <h3>{project.title}</h3>
                     <p>{project.description}</p>
@@ -138,7 +139,9 @@ export default function Home() {
           </div>
         </div>
         <div className="right">
-          <Clock />
+          <div className="right-clock">
+            <Clock />
+          </div>
           <div className="text-box">
             <h2 className="title">Social links</h2>
             <div className="links">
