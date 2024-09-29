@@ -8,7 +8,7 @@
     src: url('./fonts/GlitchGoblin-2O87v.ttf');
 }
 
-// Definitions
+// Reusable components
 
 $font: "Source Code Pro", monospace;
 $cyber-font: 'Cyberway Riders';
@@ -49,6 +49,8 @@ $cyber-green: #12BFC8;
     gap: $gap;
 }
 
+// Global
+
 * {
     padding: 0;
     margin: 0;
@@ -56,6 +58,7 @@ $cyber-green: #12BFC8;
     list-style: none;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
+
     &::selection {
         background: $secondary;
         color: $cyan;
@@ -82,7 +85,8 @@ html {
     }
 }
 
-img, iframe{
+img,
+iframe {
     user-select: none;
 }
 
@@ -94,6 +98,7 @@ button {
 
 a {
     color: #bfd5ff;
+
     &:hover {
         text-decoration: underline;
         color: #fff;
@@ -102,9 +107,11 @@ a {
 
 ul {
     margin-left: 15px;
+
     li {
         list-style: disc;
         text-shadow: 0 0 7px #fff;
+
         &:not(:first-child) {
             padding-top: 15px;
         }
@@ -119,6 +126,7 @@ body {
     color: #fff;
     position: relative;
     margin: auto;
+
     &::before {
         content: '';
         position: absolute;
@@ -145,8 +153,9 @@ body {
     font-family: $cyber-font;
     letter-spacing: 3px;
     transform: rotate(15deg);
-    z-index: 1000;
+    z-index: 100;
     transition: 300ms;
+
     &:hover {
         animation: menu-btn 1s;
     }
@@ -189,7 +198,7 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 100vw;
+    width: 105vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(2px);
@@ -201,8 +210,8 @@ body {
     transform: translate(-50%, -50%) scale(0);
     transition: 500ms ease;
     transform-origin: top right;
-    z-index: 999;
-    opacity: .5;
+    z-index: 99;
+    opacity: .4;
 }
 
 .menu-overlay.show {
@@ -228,21 +237,22 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .menu-btn{
-        &:hover{
+    .menu-btn {
+        &:hover {
             animation: none;
         }
     }
 }
 
 @media screen and (max-width: 620px) {
-    .menu-btn{
+    .menu-btn {
         font-size: 2.3rem;
         top: 5px;
     }
 
-    .menu-item{
+    .menu-item {
         font-size: 3rem;
+        letter-spacing: 5px;
     }
 }
 
@@ -259,6 +269,7 @@ body {
     text-align: center;
     min-height: 100px;
     width: 100%;
+
     .clock {
         font-family: $goblin-font;
         color: $secondary;
@@ -269,14 +280,15 @@ body {
     }
 }
 
-.right-clock{
+.right-clock {
     width: 100%;
 }
 
-.left-clock{
+.left-clock {
     width: 100%;
     display: none;
-    .clock-container{
+
+    .clock-container {
         min-height: auto;
         padding: 10px;
         font-size: 3rem;
@@ -351,30 +363,32 @@ body {
                 animation: fast-glitch-2 2s linear infinite reverse;
             }
         }
-
     }
 }
 
 .small-logo {
     display: none;
+
     &:before,
-        &:after {
-            content: 'WZ' !important;
-        }
+    &:after {
+        content: 'WZ' !important;
+    }
 }
 
 @media screen and (max-width: 900px) {
-    .logo-content{
+    .logo-content {
         @include flex-start(0);
     }
 }
 
 @media screen and (max-width: 620px) {
-    .logo-content{
+    .logo-content {
+
         .logo,
         .small-logo {
             padding: 15px 0 5px 30px;
             font-size: 3rem;
+
             &:before,
             &:after {
                 padding: 15px 0 5px 30px;
@@ -384,16 +398,19 @@ body {
 }
 
 @media screen and (max-width: 450px) {
-    .logo-content{
-        .logo{
+    .logo-content {
+        .logo {
+
             &:before,
             &:after {
                 content: 'WZ';
             }
         }
+
         .logo {
             display: none;
         }
+
         .small-logo {
             display: block;
         }
@@ -405,15 +422,17 @@ body {
 #home {
     position: relative;
     max-width: 1200px;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 30px auto;
     padding: 0 25px 40px 25px;
     display: grid;
     grid-template-columns: 70% 30%;
     gap: 15px;
+
     .left,
     .right {
         @include flex-column-start(15px);
     }
+
     &::before {
         content: '';
         position: absolute;
@@ -427,7 +446,7 @@ body {
         z-index: -1;
         opacity: .8;
         animation: infinite-rotate 20s linear infinite;
-    }    
+    }
 }
 
 @keyframes infinite-rotate {
@@ -441,30 +460,33 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-    #home::before{
+    #home::before {
         display: none;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    #home{
+    #home {
         grid-template-columns: 100%;
         grid-template-rows: auto;
+
         .right-clock,
-        .gif-container{
+        .gif-container {
             display: none;
         }
-        .left-clock{
+
+        .left-clock {
             display: flex;
         }
-        .right{
+
+        .right {
             flex-direction: column-reverse;
         }
     }
 }
 
 @media screen and (max-width: 1000px) {
-    #home{
+    #home {
         margin-top: 25px;
         padding: 0 15px;
     }
@@ -514,8 +536,10 @@ body {
 
 .links {
     @include flex-column-start(10px);
+
     a {
         color: $cyan;
+
         &:hover {
             color: #fff;
             text-decoration: underline;
@@ -531,8 +555,10 @@ body {
     border: 1px solid #bfd5ff;
     border-radius: 5px;
     overflow: hidden;
+
     .gifs {
         position: relative;
+
         iframe {
             width: 100%;
             aspect-ratio: 1/1;
@@ -540,6 +566,7 @@ body {
             position: relative;
         }
     }
+
     small {
         display: block;
         padding: 5px 5px 10px 10px;
@@ -552,6 +579,7 @@ body {
     @include flex-column-start(15px);
     width: 100%;
     margin: 20px 0;
+
     .project {
         cursor: pointer;
         color: #fff;
@@ -560,24 +588,29 @@ body {
         width: 100%;
         @include flex-start(15px);
         transition: 150ms;
+
         &:hover {
             text-decoration: none;
             background: #360029;
             box-shadow: 0 0 10px #92b8ff;
         }
+
         img {
             transition: 150ms;
             opacity: .5;
             width: 250px;
             border-radius: 8px
         }
+
         &:hover img {
             opacity: .9;
         }
+
         .info {
             @include flex-column-start(10px);
             text-align: start;
             padding: 10px 10px 0 10px;
+
             h3 {
                 color: $cyan;
                 letter-spacing: 3px;
@@ -592,21 +625,24 @@ body {
     @include flex-start(15px 35px);
     flex-wrap: wrap;
     text-align: start;
+
     a {
         display: inline;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .projects{ 
-        .project{
+    .projects {
+        .project {
             @include flex-column-start(0);
             padding: 0;
-            &:hover{
+
+            &:hover {
                 background: none;
                 box-shadow: none;
             }
-            img{
+
+            img {
                 width: 100%;
                 opacity: 1;
             }
@@ -627,6 +663,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+
     .text {
         position: absolute;
         right: 150px;
@@ -635,9 +672,11 @@ body {
         height: 700px;
         overflow: auto;
         mask-image: linear-gradient(to top, transparent, #fff 10%);
+
         &::-webkit-scrollbar {
             display: none;
         }
+
         .text-box {
             margin: 25px 0;
 
@@ -646,6 +685,7 @@ body {
             }
         }
     }
+
     #miles {
         height: 106vh;
         position: fixed;
@@ -656,11 +696,12 @@ body {
 }
 
 @media screen and (max-width: 1400px) {
-    #about{
-        .text{
+    #about {
+        .text {
             right: 50px;
             width: 500px;
         }
+
         #miles {
             left: -75px;
         }
@@ -668,7 +709,7 @@ body {
 }
 
 @media screen and (max-width: 1080px) {
-    #about{
+    #about {
         #miles {
             left: -100px;
         }
@@ -676,19 +717,22 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    #about{
+    #about {
         @include flex-center(0);
         background-position: right;
-        .text{
-            position: relative;
-            top: 0;
-            right: 0;
+
+        .text {
+            position: static;
+            top: auto;
+            right: auto;
             width: 100%;
             padding: 25px;
+
             .text-box {
-                margin: 0 0 30px 0;
+                margin: auto auto 30px auto;
             }
         }
+
         #miles {
             display: none;
         }
@@ -696,9 +740,10 @@ body {
 }
 
 @media screen and (max-width: 620px) {
-    #about{
+    #about {
         padding-bottom: 50px;
-        .text{
+
+        .text {
             margin: 200px 0 0 0;
             padding: 0 25px 50px 25px;
             height: 800px;
@@ -707,8 +752,8 @@ body {
 }
 
 @media screen and (max-width: 420px) {
-    #about{
-        .text{
+    #about {
+        .text {
             padding: 0 15px 30px 15px;
         }
     }
@@ -716,13 +761,14 @@ body {
 
 // Contact Styles
 
-#contact{
+#contact {
     @include flex-column-center(35px);
     text-align: center;
     padding: 25px;
     width: 100vw;
     height: 100vh;
-    a{
+
+    a {
         background: #360029;
         position: relative;
         color: #fff;
@@ -735,6 +781,7 @@ body {
         box-shadow: 4px 2px 0 #ff0000, -4px -2px 0 #0060f0;
         text-shadow: 3px 0 0 #ff0000, -3px -0 0 #0060f0;
         transition: .3s;
+
         &:before,
         &:after {
             padding: 15px 0 0 0;
@@ -745,17 +792,20 @@ body {
             height: 100%;
             top: 0;
         }
+
         &:before {
             left: 4px;
             text-shadow: -5px 0 #ff0000;
             animation: fast-glitch-1 2s linear infinite reverse;
         }
+
         &:after {
             left: -4px;
             text-shadow: -5px 0 #0060f0;
             animation: fast-glitch-2 2s linear infinite reverse;
         }
-        &:hover{
+
+        &:hover {
             text-decoration: none;
             box-shadow: -4px 2px 0 #ff0000, 4px -2px 0 #0060f0;
         }
@@ -776,64 +826,72 @@ body {
     background-position: center;
     background-size: cover;
     transition: all 0.1s ease-out;
-    z-index: 9999;
+    z-index: 999;
     pointer-events: none;
-  }
-  
-  .animated {
+}
+
+.animated {
     opacity: 0;
-  }
-  
-  .pageLoad[loadimg="1"] {
+}
+
+.pageLoad[loadimg="1"] {
     background-image: url('./img/smoke1.png');
-  }
-  
-  .pageLoad[loadimg="2"] {
+}
+
+.pageLoad[loadimg="2"] {
     background-image: url('./img/smoke2.png');
-  }
-  .pageLoad[loadimg="3"] {
+}
+
+.pageLoad[loadimg="3"] {
     background-image: url('./img/smoke3.png');
-  }
-  .pageLoad[loadimg="4"] {
+}
+
+.pageLoad[loadimg="4"] {
     background-image: url('./img/smoke4.png');
-  }
-  .pageLoad[loadimg="5"] {
+}
+
+.pageLoad[loadimg="5"] {
     background-image: url('./img/smoke5.png');
-  }
-  .pageLoad[loadimg="6"] {
+}
+
+.pageLoad[loadimg="6"] {
     background-image: url('./img/smoke6.png');
-  }
-  .pageLoad[loadimg="7"] {
+}
+
+.pageLoad[loadimg="7"] {
     background-image: url('./img/smoke7.png');
-  }
-  .pageLoad[loadimg="8"] {
+}
+
+.pageLoad[loadimg="8"] {
     background-image: url('./img/smoke8.png');
-  }
-  .pageLoad[loadimg="9"] {
+}
+
+.pageLoad[loadimg="9"] {
     background-image: url('./img/smoke9.png');
-  }
-  .pageLoad[loadimg="10"] {
+}
+
+.pageLoad[loadimg="10"] {
     background-image: url('./img/smoke10.png');
-  }
-  
-  .transition {
+}
+
+.transition {
     &-enter {
-      opacity: 0;
+        opacity: 0;
     }
-  
+
     &-enter-active {
-      opacity: 1;
-      transition: 300ms;
+        opacity: 1;
+        transition: 300ms;
     }
-  
+
     &-exit {
-      opacity: 1;
+        opacity: 1;
     }
-  
+
     &-exit-active {
-      opacity: 0;
+        opacity: 0;
     }
-  }
+}
 
 // Global Styles & Animations
 
@@ -843,6 +901,7 @@ body {
     border: 1px solid #92b8ff;
     border-radius: 5px;
     padding: 25px;
+
     p {
         text-shadow: 0 0 7px #fff;
         padding-bottom: 15px;
@@ -851,7 +910,7 @@ body {
 }
 
 @media screen and (max-width: 420px) {
-    .text-box{
+    .text-box {
         padding: 25px 15px;
     }
 }
