@@ -718,6 +718,10 @@ body {
 
 @media screen and (max-width: 768px) {
     #about {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: 100%;
         @include flex-center(0);
         background-position: right;
 
@@ -727,6 +731,7 @@ body {
             right: auto;
             width: 100%;
             padding: 25px;
+            margin: 100px 0 0 0;
 
             .text-box {
                 margin: auto auto 30px auto;
@@ -744,9 +749,7 @@ body {
         padding-bottom: 50px;
 
         .text {
-            margin: 200px 0 0 0;
             padding: 0 25px 50px 25px;
-            height: 800px;
         }
     }
 }

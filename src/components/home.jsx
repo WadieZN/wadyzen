@@ -18,52 +18,23 @@ export default function Home() {
 
   const projects = [
     {
-      title: "Studio Components Library",
-      description:
-        "This website showcase how I can make different and responsive layouts.",
-      img: project1,
-      url: "https://dev.highness.co/projects/interns/wadie/studio-ds/",
-    },
-    {
       title: "Weather App",
       description:
         "Built using WeatherAPI and Promises. One of my very first projects.",
       img: project2,
       url: "https://wadiezn.github.io/weather-app/",
     },
-    {
-      title: "Monsieur Peinture",
-      description:
-        "Just a design - without backend - of a walls painiting platform.",
-      img: project3,
-      url: "https://dev.highness.co/projects/interns/wadie/mp/admin/index.html",
-    },
   ];
 
   const otherProjects = [
     { name: "Etch a Sketch", url: "https://wadiezn.github.io/Etch-a-Sketch/" },
-    {
-      name: "SmashBrand",
-      url: "https://dev.highness.co/projects/interns/wadie/sb/audits.html",
-    },
-    {
-      name: "Prospero Nursery",
-      url: "https://dev.highness.co/projects/interns/wadie/prospero-nursery/",
-    },
+ 
     { name: "Calculator", url: "https://wadiezn.github.io/Calculator/" },
     {
       name: "Nissan GTR Example",
       url: "https://wadyzen-nissan-gtr.netlify.app/",
     },
-    {
-      name: "New Jersey Pain Therapy",
-      url: "https://dev.highness.co/projects/interns/wadie/njpaintherapy/index.html",
-    },
     { name: "Tic Tac Toe", url: "https://wadiezn.github.io/tic-tac-toe/" },
-    {
-      name: "SAIEVE",
-      url: "https://dev.highness.co/projects/interns/wadie/saieve/",
-    },
     {
       name: "Simple Responsive Homepage",
       url: "https://wadiezn.github.io/Homepage/",
