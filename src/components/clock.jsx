@@ -12,8 +12,10 @@ const Clock = () => {
   }, []);
 
   const formattedTime = time.toLocaleTimeString([], {
-    hour: '2-digit', minute: '2-digit',
-  });
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  });  
 
   return (
     <div className='clock-container'>

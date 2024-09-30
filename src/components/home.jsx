@@ -106,6 +106,7 @@ export default function Home() {
                   {otherProject.name}
                 </a>
               ))}
+              <p style={{marginTop: '15px'}}>I have more Front End projects from my recent internship, but they are kept private to respect the company's guidelines.</p>
             </div>
           </div>
         </div>

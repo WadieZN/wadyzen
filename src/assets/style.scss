@@ -66,6 +66,8 @@ $cyber-green: #12BFC8;
 }
 
 html {
+    scrollbar-width: thin;
+    scrollbar-color: $cyan transparent;
     scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
@@ -77,7 +79,7 @@ html {
     }
 
     &::-webkit-scrollbar-thumb {
-        background: $cyber-green;
+        background: $cyan;
 
         &:active {
             background: #0b777c;
@@ -672,7 +674,8 @@ body {
         height: 700px;
         overflow: auto;
         mask-image: linear-gradient(to top, transparent, #fff 10%);
-
+        scrollbar-width: none;
+        
         &::-webkit-scrollbar {
             display: none;
         }

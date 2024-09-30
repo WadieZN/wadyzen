@@ -6,18 +6,30 @@ const randomLetter = () => {
   return characters[Math.floor(Math.random() * characters.length)];
 };
 
+const isSystemFast = () => {
+  const cores = navigator.hardwareConcurrency || 2; 
+  const memory = navigator.deviceMemory || 4;
+
+  return cores >= 4 && memory >= 8;
+};
+
 export default function HackerEffectMenuItem({ targetText, onClose }) {
   const [displayText, setDisplayText] = useState(targetText);
   const [index, setIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const [effectRunning, setEffectRunning] = useState(false);
+  const [systemIsFast, setSystemIsFast] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setSystemIsFast(isSystemFast());
+  }, []);
 
   useEffect(() => {
     let interval;
     let revealTimeout;
 
-    if (effectRunning && index < targetText.length) {
+    if (systemIsFast && effectRunning && index < targetText.length) {
       interval = setInterval(() => {
         const randomPart = Array(targetText.length - index)
           .fill(0)
@@ -37,7 +49,7 @@ export default function HackerEffectMenuItem({ targetText, onClose }) {
       clearInterval(interval);
       clearTimeout(revealTimeout);
     };
-  }, [effectRunning, index, targetText]);
+  }, [systemIsFast, effectRunning, index, targetText]);
 
   useEffect(() => {
     if (isHovering) {
@@ -58,9 +70,11 @@ export default function HackerEffectMenuItem({ targetText, onClose }) {
       const targetRoute = '/'; 
       navigate(targetRoute); 
       onClose();
-    } else { const targetRoute = `/${targetText.toLowerCase()}`; 
+    } else { 
+      const targetRoute = `/${targetText.toLowerCase()}`; 
       navigate(targetRoute); 
-      onClose();}
+      onClose();
+    }
   };
 
   return (
