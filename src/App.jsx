@@ -3,6 +3,17 @@ import Menu from "./components/menu";
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { useState, Suspense, lazy, useEffect } from "react";
 import PageLoad from './components/pageload';
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-NX280VJHW2");
+
+function UsePageTracking() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+}
 
 const About = lazy(() => import('./components/about'));
 const Contact = lazy(() => import('./components/contact'));
@@ -13,7 +24,6 @@ function PageTransition() {
 
   useEffect(() => {
     setLoading(true);
-
     const timer = setTimeout(() => {
       setLoading(false);
     }, 800);
@@ -25,10 +35,10 @@ function PageTransition() {
 }
 
 export default function App() {
-  const [isVisible, setIsVisible] = useState(false); 
+  const [isVisible, setIsVisible] = useState(false);
 
   const toggleMenu = () => {
-    setIsVisible(!isVisible); 
+    setIsVisible(!isVisible);
   };
 
   const closeMenu = () => {
@@ -39,15 +49,19 @@ export default function App() {
     About.preload && About.preload();
     Contact.preload && Contact.preload();
   }, []);
+  
 
   return (
     <Router>
       <div>
+        {/* Track page views after initializing router*/}
+        <UsePageTracking />
+
         <button className="menu-btn" onClick={toggleMenu}>
           {isVisible ? "Close" : "Menu"}
         </button>
         <Menu isVisible={isVisible} onClose={closeMenu} />
-        
+
         <PageTransition />
 
         <Suspense>
