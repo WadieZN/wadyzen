@@ -2,9 +2,8 @@ import { Link } from 'react-router-dom';
 import Clock from "./clock";
 import InfiniteScroll from "./infiniteScroll";
 import CyberpunkGIFs from "./gifs";
-import project1 from "./../assets/img/punkt.png";
-import project2 from "./../assets/img/weather.png";
-import project3 from "./../assets/img/mp.png";
+import project1 from "./../assets/img/weather.png";
+import project2 from "./../assets/img/memory-game.png";
 
 export default function Home() {
   const links = [
@@ -21,8 +20,15 @@ export default function Home() {
       title: "Weather App",
       description:
         "Built using WeatherAPI and Promises. One of my very first projects.",
-      img: project2,
+      img: project1,
       url: "https://wadiezn.github.io/weather-app/",
+    },
+    {
+      title: "Memory Cards Game",
+      description:
+        "An entertaining game built using AniList API, to train your muscle memory",
+      img: project2,
+      url: "https://wadyzen-memory-game.netlify.app/",
     },
   ];
 
