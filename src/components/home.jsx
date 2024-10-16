@@ -26,7 +26,7 @@ export default function Home() {
     {
       title: "Memory Cards Game",
       description:
-        "An entertaining game built using AniList API, to train your muscle memory",
+        "An entertaining game built using AniList API, to train your muscle memory.",
       img: project2,
       url: "https://wadyzen-memory-game.netlify.app/",
     },

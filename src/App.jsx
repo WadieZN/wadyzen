@@ -54,7 +54,6 @@ export default function App() {
   return (
     <Router>
       <div>
-        {/* Track page views after initializing router*/}
         <UsePageTracking />
 
         <button className="menu-btn" onClick={toggleMenu}>
