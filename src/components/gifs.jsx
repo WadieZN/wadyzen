@@ -7,11 +7,9 @@ export default function CyberpunkGIFs() {
     'https://giphy.com/embed/MVgokUYqRcuhY3z5Hy',
     'https://giphy.com/embed/wI8NgmL6EbuQRuYguN',
     'https://giphy.com/embed/3o7qE6GmiEj9QsrAKA',
-    'https://giphy.com/embed/FHEPD8bbvbRWZcwyWA',
     'https://giphy.com/embed/l4Ki26QTzUOc832iQ',
     'https://giphy.com/embed/qdE3mNNKvvXJHiogXs',
     'https://giphy.com/embed/Zbbbvez4VtDUGEtEjh',
-    'https://giphy.com/embed/51QD2FJw7yPUDyHSHW',
     'https://giphy.com/embed/l4KidLqgsccKDPDCo',
     'https://giphy.com/embed/RbDKaczqWovIugyJmW',
     'https://giphy.com/embed/xUOwG5x1vFWzSF3Try',
@@ -39,7 +37,7 @@ export default function CyberpunkGIFs() {
         }
         return nextIndex;
       });
-    }, 12000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [shuffledGIFs]);

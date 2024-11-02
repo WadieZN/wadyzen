@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom';
 import Clock from "./clock";
 import InfiniteScroll from "./infiniteScroll";
 import CyberpunkGIFs from "./gifs";
-import project1 from "./../assets/img/weather.png";
-import project2 from "./../assets/img/memory-game.png";
+import weatherImg from "./../assets/img/weather.png";
+import memoryGameImg from "./../assets/img/memory-game.png";
+import cinezenImg from "./../assets/img/cinezen.png";
 
 export default function Home() {
   const links = [
@@ -17,17 +18,24 @@ export default function Home() {
 
   const projects = [
     {
+      title: "CineZen, Movies & TV Series Explorer",
+      description:
+        "One of my favorite projects. Built with React and Tmdb API.",
+      img: cinezenImg,
+      url: "https://cine-zen.netlify.app/",
+    },
+    {
       title: "Weather App",
       description:
         "Built using WeatherAPI and Promises. One of my very first projects.",
-      img: project1,
+      img: weatherImg,
       url: "https://wadiezn.github.io/weather-app/",
     },
     {
       title: "Memory Cards Game",
       description:
         "An entertaining game built using AniList API, to train your muscle memory.",
-      img: project2,
+      img: memoryGameImg,
       url: "https://wadyzen-memory-game.netlify.app/",
     },
   ];
@@ -67,7 +75,7 @@ export default function Home() {
           <div className="text-box">
             <h2 className="title">Little Introduction</h2>
             <p>
-              This is my website, inspired by all the fancy cyberpunk-themed
+              This is my temporary website, inspired by all the fancy cyberpunk-themed
               stuff (especially Spider-Verse and Edgerunners).
             </p>
             <p>
@@ -75,7 +83,6 @@ export default function Home() {
       </p>
             <h3 className="subtitle">Some quick facts:</h3>
             <ul>
-              <li>I'm from Morocco, still live here.</li>
               <li>My main programming language is JavaScript.</li>
               <li>I'm pro at chess.</li>
               <li>

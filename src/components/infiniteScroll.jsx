@@ -1,6 +1,6 @@
 const skills = [
-  'HTML5', 'CSS3', 'JavaScript', 'React', 'jQuery', 'TypeScript', 
-  'Redux', 'SASS', 'Tailwind',  'Jest', 'Webpack', 'Git', 'Figma',
+  'HTML5', 'CSS3', 'JavaScript', 'React', 'jQuery', 'PHP', 'SQL', 'TypeScript', 
+  'Redux', 'Node.js', 'SASS', 'Tailwind',  'Jest', 'Webpack', 'Git', 'Figma',
   'Responsive Design', 'Testing', 'API Integration', 'AJAX',
 ];
 
