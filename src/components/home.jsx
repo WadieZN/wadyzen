@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Clock from "./clock";
 import InfiniteScroll from "./infiniteScroll";
 import CyberpunkGIFs from "./gifs";
@@ -42,11 +42,19 @@ export default function Home() {
 
   const otherProjects = [
     { name: "Etch a Sketch", url: "https://wadiezn.github.io/Etch-a-Sketch/" },
- 
+
     { name: "Calculator", url: "https://wadiezn.github.io/Calculator/" },
     {
       name: "Nissan GTR Example",
       url: "https://wadyzen-nissan-gtr.netlify.app/",
+    },
+    {
+      name: "NJ Pain Therapy",
+      url: "https://wadiezn.github.io/NJP/",
+    },
+    {
+      name: "Novato",
+      url: "https://wadiezn.github.io/Novato/dashboard.html",
     },
     { name: "Tic Tac Toe", url: "https://wadiezn.github.io/tic-tac-toe/" },
     {
@@ -59,28 +67,30 @@ export default function Home() {
   return (
     <>
       <div className="logo-content">
-      <h1 className="logo">
-        Wady<span>Zen</span>
-      </h1>
-      <p className="small-logo">
-        W<span>Z</span>
-      </p>
-    </div>
+        <h1 className="logo">
+          Wady<span>Zen</span>
+        </h1>
+        <p className="small-logo">
+          W<span>Z</span>
+        </p>
+      </div>
 
       <div id="home">
         <div className="left">
-        <div className='left-clock'>
-          <Clock />
-        </div>
+          <div className="left-clock">
+            <Clock />
+          </div>
           <div className="text-box">
             <h2 className="title">Little Introduction</h2>
             <p>
-              This is my temporary website, inspired by all the fancy cyberpunk-themed
-              stuff (especially Spider-Verse and Edgerunners).
+              This is my temporary website, inspired by all the fancy
+              cyberpunk-themed stuff (especially Spider-Verse and Edgerunners).
             </p>
             <p>
-        I'm quite obviously a programmer. I code some random things when I feel like it. You can read more about me <Link to="/about">here.</Link>
-      </p>
+              I'm quite obviously a programmer. I code some random things when I
+              feel like it. You can read more about me{" "}
+              <Link to="/about">here.</Link>
+            </p>
             <h3 className="subtitle">Some quick facts:</h3>
             <ul>
               <li>My main programming language is JavaScript.</li>
@@ -103,7 +113,12 @@ export default function Home() {
             <h2 className="title">Projects</h2>
             <div className="projects">
               {projects.map((project, index) => (
-                <a href={project.url} key={index} target="_blank" className="project">
+                <a
+                  href={project.url}
+                  key={index}
+                  target="_blank"
+                  className="project"
+                >
                   <img src={project.img} alt="" />
                   <div className="info">
                     <h3>{project.title}</h3>
@@ -119,7 +134,12 @@ export default function Home() {
                   {otherProject.name}
                 </a>
               ))}
-              <p style={{marginTop: '15px'}}>I have more Front End projects from my recent internship, but they are kept private to respect the company's guidelines.</p>
+              <p style={{ marginTop: "15px" }}>
+                I'm currently working on a full car rental management system for
+                a client, and it is one of the best things I've made so far, yet
+                the most complicated. I'll add a video of its demo later on my
+                LinkedIn profile.
+              </p>
             </div>
           </div>
         </div>
