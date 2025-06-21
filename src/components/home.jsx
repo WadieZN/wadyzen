@@ -82,8 +82,16 @@ export default function Home() {
           </div>
           <div className="text-box">
             <h2 className="title">Little Introduction</h2>
+            <p style={{ color: "#ffa9a9" }}>
+              Welcome! I’ve moved to a new site with my latest projects. You can
+              visit it{" "}
+              <a href="https://wadiezn.netlify.app" target="_blank">
+                here
+              </a>
+              .
+            </p>
             <p>
-              This is my temporary website, inspired by all the fancy
+              This is my old portfolio website, inspired by all the fancy
               cyberpunk-themed stuff (especially Spider-Verse and Edgerunners).
             </p>
             <p>
@@ -95,13 +103,6 @@ export default function Home() {
             <ul>
               <li>My main programming language is JavaScript.</li>
               <li>I'm pro at chess.</li>
-              <li>
-                I'm a top contributor at{" "}
-                <a href="https://www.theodinproject.com" target="_blank">
-                  The Odin Project
-                </a>
-                .
-              </li>
               <li>
                 I draw cool things when I'm forced offline, especially anime
                 characters.
@@ -134,11 +135,9 @@ export default function Home() {
                   {otherProject.name}
                 </a>
               ))}
-              <p style={{ marginTop: "15px" }}>
-                I'm currently working on a full car rental management system for
-                a client, and it is one of the best things I've made so far, yet
-                the most complicated. I'll add a video of its demo later on my
-                LinkedIn profile.
+              <p style={{marginTop: "15px"}}>
+                You can check some of my recent work at{" "}
+                <a href="https://wadiezn.netlify.app">my new website</a>.
               </p>
             </div>
           </div>
