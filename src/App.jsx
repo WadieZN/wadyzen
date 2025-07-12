@@ -1,22 +1,16 @@
 import Home from "./components/home";
 import Menu from "./components/menu";
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import { useState, Suspense, lazy, useEffect } from "react";
-import PageLoad from './components/pageload';
-import ReactGA from "react-ga4";
+import PageLoad from "./components/pageload";
 
-ReactGA.initialize("G-NX280VJHW2");
-
-function UsePageTracking() {
-  const location = useLocation();
-
-  useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname });
-  }, [location]);
-}
-
-const About = lazy(() => import('./components/about'));
-const Contact = lazy(() => import('./components/contact'));
+const About = lazy(() => import("./components/about"));
+const Contact = lazy(() => import("./components/contact"));
 
 function PageTransition() {
   const [loading, setLoading] = useState(true);
@@ -49,13 +43,10 @@ export default function App() {
     About.preload && About.preload();
     Contact.preload && Contact.preload();
   }, []);
-  
 
   return (
     <Router>
       <div>
-        <UsePageTracking />
-
         <button className="menu-btn" onClick={toggleMenu}>
           {isVisible ? "Close" : "Menu"}
         </button>

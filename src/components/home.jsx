@@ -85,7 +85,7 @@ export default function Home() {
             <p style={{ color: "#ffa9a9" }}>
               Welcome! I’ve moved to a new site with my latest projects. You can
               visit it{" "}
-              <a href="https://wadiezn.netlify.app" target="_blank">
+              <a href="https://wadyzen.dev/" target="_blank">
                 here
               </a>
               .
